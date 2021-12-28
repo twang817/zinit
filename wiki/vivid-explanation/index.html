@@ -13,7 +13,7 @@
     
     
       
-        <title>Overview - Zinit Wiki</title>
+        <title>Vivid Explanation - Zinit Wiki</title>
       
     
     
@@ -108,11 +108,6 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
-        
-        <a href="#code_documentation" class="md-skip">
-          Skip to content
-        </a>
-      
     </div>
     <div data-md-component="announce">
       
@@ -175,7 +170,7 @@
             </span>
             <span class="md-header-nav__topic">
               
-                Overview
+                Vivid Explanation
               
             </span>
           
@@ -984,15 +979,17 @@
 <!-- Determine class according to level -->
 
 
+  
+
 
 <!-- Main navigation item with nested items -->
 
-  <li class="md-nav__item md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
 
     <!-- Active checkbox expands items contained within nested section -->
     
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3"
-          type="checkbox" id="nav-3" />
+          type="checkbox" id="nav-3" checked />
     
 
     <!-- Expand active pages -->
@@ -1150,15 +1147,33 @@
 <!-- Determine class according to level -->
 
 
+  
+
 
 <!-- Main navigation item with nested items -->
 
-  <li class="md-nav__item">
-    <a href="../vivid-explanation/" title="Vivid Explanation"
-        class="md-nav__link">
+  <li class="md-nav__item md-nav__item--active">
+    
+
+    <!-- Active checkbox expands items contained within nested section -->
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc"
+        type="checkbox" id="__toc" />
+
+    <!-- Hack: see partials/toc.html for more information -->
+    
+
+    <!-- Render table of contents, if not empty -->
+    
+    <a href="./" title="Vivid Explanation"
+        class="md-nav__link md-nav__link--active">
       Vivid Explanation
     </a>
+
+    <!-- Show table of contents -->
+    
   </li>
+
+<!-- Main navigation item -->
 
         
           
@@ -1845,17 +1860,15 @@
 <!-- Determine class according to level -->
 
 
-  
-
 
 <!-- Main navigation item with nested items -->
 
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
 
     <!-- Active checkbox expands items contained within nested section -->
     
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6"
-          type="checkbox" id="nav-6" checked />
+          type="checkbox" id="nav-6" />
     
 
     <!-- Expand active pages -->
@@ -1899,35 +1912,15 @@
 <!-- Determine class according to level -->
 
 
-  
-
 
 <!-- Main navigation item with nested items -->
 
-  <li class="md-nav__item md-nav__item--active">
-    
-
-    <!-- Active checkbox expands items contained within nested section -->
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc"
-        type="checkbox" id="__toc" />
-
-    <!-- Hack: see partials/toc.html for more information -->
-    
-      
-    
-
-    <!-- Render table of contents, if not empty -->
-    
-    <a href="./" title="Overview"
-        class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../Code-Documentation/" title="Overview"
+        class="md-nav__link">
       Overview
     </a>
-
-    <!-- Show table of contents -->
-    
   </li>
-
-<!-- Main navigation item -->
 
         
           
@@ -2096,72 +2089,193 @@
               </div>
             
             
-              
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
-                <div class="md-sidebar__scrollwrap">
-                  <div class="md-sidebar__inner">
-                    <!--
-  Copyright (c) 2016-2019 Martin Donath <martin.donath@squidfunk.com>
-
-  Permission is hereby granted, free of charge, to any person obtaining a copy
-  of this software and associated documentation files (the "Software"), to
-  deal in the Software without restriction, including without limitation the
-  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
-  sell copies of the Software, and to permit persons to whom the Software is
-  furnished to do so, subject to the following conditions:
-
-  The above copyright notice and this permission notice shall be included in
-  all copies or substantial portions of the Software.
-
-  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
-  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
-  IN THE SOFTWARE.
--->
-
-
-
-<!-- Table of contents -->
-<nav class="md-nav md-nav--secondary">
-  
-
-  <!--
-    Hack: check whether the content contains a h1 headline. If it does, the
-    top-level anchor must be skipped, since it would be redundant to the link
-    to the current page that is located just above the anchor. Therefore we
-    directly continue with the children of the anchor.
-  -->
-  
-    
-  
-
-  <!-- Render item list -->
-  
-</nav>
-                  </div>
-                </div>
-              </div>
-            
           
           <div class="md-content" data-md-component="content">
             <article class="md-content__inner md-typeset">
               
                 
 
-<h1 id="code_documentation">Code documentation<a class="headerlink" href="#code_documentation" title="Permanent link">#</a></h1>
-<p>Here is code documentation generated using <a href="https://github.com/zdharma-continuum/zshelldoc"><strong>Zshelldoc</strong></a>.
-There are <code>4</code> Zinit's source files, the main one is zinit.zsh. The documentation
-lists all functions, interactions between them, their comments and features used.</p>
-<ul>
-<li><strong>zinit.zsh</strong> – always loaded, in <code>.zshrc</code> (<a href="http://zdharma.org/zinit/zinit.zsh.pdf"><strong>pdf</strong></a>)</li>
-<li><strong>zinit-side.zsh</strong> – common functions, loaded by <code>*-install</code> and <code>*-autoload</code> scripts (<a href="http://zdharma.org/zinit/zinit-side.zsh.pdf"><strong>pdf</strong></a>)</li>
-<li><strong>zinit-install.zsh</strong> – functions used only when installing a plugin or snippet (<a href="http://zdharma.org/zinit/zinit-install.zsh.pdf"><strong>pdf</strong></a>)</li>
-<li><strong>zinit-autoload.zsh</strong> – functions used only in interactive <code>Zinit</code> invocations (<a href="http://zdharma.org/zinit/zinit-autoload.zsh.pdf"><strong>pdf</strong></a>)</li>
-</ul>
-<p><a href="vim:set ft=markdown tw=80:"></a></p>
+  <h1>Vivid Explanation</h1>
+
+<p><a href="https://github.com/sharkdp/vivid">vivid</a> is a theme generator that makes it easy to generate the LS_COLORS
+environment variable used by the GNU <code>ls</code> (as well as <a href="https://github.com/ogham/exa">ogham/exa</a> and
+<a href="https://github.com/Peltoche/lsd">Peltoche/lsd</a>). The LS_COLORS format can also be easily manipulated to style
+the zsh completion system.</p>
+<p>While vivid isn't nearly as slow as its predecessors (see <a href="../LS_COLORS-explanation">LS_COLORS
+Explanation</a>), it can still be optimized by caching its output.</p>
+<p>Frustratingly, vivid's latest Github release doesn't package all the themes
+found in its master branch. Neither are we interested in compiling it from
+scratch (or, if you are, see <a href="https://github.com/zdharma-continuum/zinit-annex-rust">z-a-rust</a>).</p>
+<p>This example is a bit complex, but serves as a good example the power and
+flexibility of zinit.</p>
+<p>To start, we load several annexes that we'll be using, and configure default
+ices:</p>
+<pre><code class="language-zsh">zinit depth'3' light-mode for \
+    zdharma-continuum/zinit-annex-bin-gem-node \
+    zdharma-continuum/zinit-annex-default-ice \
+    NICHOLAS85/z-a-eval \
+    ;
+
+zinit default-ice -q depth'3' lucid light-mode
+</code></pre>
+<p>Next, we add the <code>@sharkdp/vivid</code> plugin twice, but using two different <code>id-as</code>
+ices:</p>
+<pre><code class="language-zsh">zinit wait as'null' for \
+    id-as'vivid-bin' from'gh-r' sbin&quot;**/vivid&quot; \
+        @sharkdp/vivid \
+    id-as'vivid-themes' \
+        @sharkdp/vivid
+</code></pre>
+<p>The first plugin (<code>id-as'vivid-bin'</code>) uses the <code>gh-r</code> <code>sbin</code> and <code>as</code> ices to
+download the latest vivid relase and create a shim in <code>$ZPFX/bin</code> to make the
+vivid binary available. This pattern has been covered quite well in the wiki.</p>
+<pre><code class="language-zsh">$ tree $ZPFX
+$ZPFX
+├── bin
+│   ├── …
+│   ├── vivid
+│   └── …
+├── etc
+├── man
+└── share
+
+$ tree $ZINIT[PLUGINS_DIR]/vivid-bin
+$ZINIT[PLUGINS_DIR]/vivid-bin
+└── vivid-v0.7.0-x86_64-apple-darwin
+    ├── …
+    ├── share
+    │   └── vivid
+    │       ├── filetypes.yml
+    │       └── themes
+    │           ├── ayu.yml
+    │           ├── jellybeans.yml
+    │           ├── molokai.yml
+    │           ├── one-dark.yml
+    │           ├── one-light.yml
+    │           ├── snazzy.yml
+    │           ├── solarized-dark.yml
+    │           └── solarized-light.yml
+    └── vivid
+</code></pre>
+<p>Notice that 0.7.0 doesn't package <a href="https://github.com/sharkdp/vivid/blob/master/themes/nord.yml">nord.yml</a>.</p>
+<p>So, the second plugin we load (<code>id-as'vivid-themes'</code>) as a regular Git
+repository, but still with the <code>as'null'</code> ice. This will clone the vivid
+repository and but not load anything from it. Note, that the name of the
+directory is <code>vivid-themes</code>, as specified by the <code>id-as</code> ice.</p>
+<pre><code class="language-zsh">$ tree $ZINIT[PLUGINS_DIR]/vivid-themes
+$ZINIT[PLUGINS_DIR]/vivid-themes/
+├── …
+└── themes
+    ├── ayu.yml
+    ├── iceberg-dark.yml
+    ├── jellybeans.yml
+    ├── lava.yml
+    ├── molokai.yml
+    ├── nord.yml
+    ├── one-dark.yml
+    ├── one-light.yml
+    ├── snazzy.yml
+    ├── solarized-dark.yml
+    └── solarized-light.yml
+</code></pre>
+<p>Now, we <em>could</em> directly use vivid to generate a theme using something odd like
+<code>zdharma-continuum/null</code>:</p>
+<pre><code class="language-zsh">zinit for \
+    eval'echo &quot;export LS_COLORS=\&quot;$(vivid generate $ZINIT[PLUGINS_DIR]/vivid-themes/themes/nord.yml)\&quot;&quot;' \
+        zdharma-continuum/null
+</code></pre>
+<p>But, <code>zdharma-continuum/null</code> is a bit of a smell.  A snippet here is more
+appropriate:</p>
+<pre><code class="language-zsh">zinit for \
+    wait'
+        (( $+commands[vivid] )) &amp;&amp;
+        [[ -f ${ZINIT[PLUGINS_DIR]}/vivid-themes/themes/nord.yml ]]
+    ' \
+    is-snippet \
+    id-as'vivid-theme-nord' \
+    link \
+    as'null' \
+    nocompile \
+    eval'echo &quot;export LS_COLORS=\&quot;$(vivid generate vivid-theme-nord)\&quot;&quot;' \
+    atload'zstyle &quot;:completion:*&quot; list-colors &quot;${(s.:.)LS_COLORS}&quot;' \
+        ${ZINIT[PLUGINS_DIR]}/vivid-themes/themes/nord.yml
+</code></pre>
+<p>So, let's break this down step-by-step:</p>
+<pre><code class="language-zsh">1. is-snippet
+   id-as'vivid-theme-nord' \
+   link
+       ${ZINIT[PLUGINS_DIR]}/vivid-themes/themes/nord.yml
+</code></pre>
+<p>Here, we declare that we're loading a <em>local</em> snippet located <em>in the repo</em> that
+we previously cloned through the <code>vivid-themes</code> plugin.  The <code>link</code> ice will
+symlink the file, instead of copying it.  The result:</p>
+<pre><code class="language-zsh">$ tree $ZINIT[SNIPPETS_DIR]/vivid-theme-nord
+$ZINIT[SNIPPETS_DIR]/vivid-theme-nord
+└── vivid-theme-nord -&gt; ../../plugins/vivid-themes/themes/nord.yml
+</code></pre>
+<pre><code class="language-zsh">2. as'null'
+   nocompile
+</code></pre>
+<p>The snippet we're loading isn't actuall a shell script.  It's a theme file for
+vivid.  We use the <code>as'null'</code> ice to disable loading; and obviously, we don't
+want to compile it.</p>
+<pre><code class="language-zsh">3. eval'echo &quot;export LS_COLORS=\&quot;$(vivid generate vivid-theme-nord)\&quot;&quot;'
+</code></pre>
+<p>Since we don't want vivid to regenerate the LS_COLOR definition with <em>each</em> new
+shell, we take advantage of <a href="https://github.com/NICHOLAS85/z-a-eval">z-a-eval</a> which will cache the <em>output</em> of the
+<code>eval</code> ice.  The filename of the cache is <code>evalcache.zsh</code>.</p>
+<pre><code class="language-zsh">$ tree $ZINIT[SNIPPETS_DIR]/vivid-theme-nord
+$ZINIT[SNIPPETS_DIR]/vivid-theme-nord
+├── evalcache.zsh
+└── vivid-theme-nord -&gt; ../../plugins/vivid-themes/themes/nord.yml
+</code></pre>
+<p>The eval command is invoked from within the context of the snippet's directory.
+This is where we have symlinked the theme file from the vivid repository
+earlier.</p>
+<p>Now on each subsequent shell, we simply source <code>evalcache.zsh</code> and we get our
+LS_COLORS without even needing vivid.</p>
+<pre><code class="language-zsh">4. atload'zstyle &quot;:completion:*&quot; list-colors &quot;${(s.:.)LS_COLORS}&quot;'
+</code></pre>
+<p>The <code>eval</code> ice doesn't interfere with load order, so we can still take advantage
+of the <code>atload</code> ice to set our zstyle list-colors using our LS_COLORS values for
+zsh's completion system.</p>
+<pre><code class="language-zsh">5. wait'
+       (( $+commands[vivid] )) &amp;&amp;
+       [[ -f ${ZINIT[PLUGINS_DIR]}/vivid-themes/themes/nord.yml ]]
+   '
+</code></pre>
+<p>Lastly, we put this entire block inside a <code>wait</code> ice to ensure that the other
+plugins have had a chance to download the vivid binary and clone the vivid
+repository.</p>
+<p>Extra Credit:</p>
+<p>Technically, we don't need the vivid binary once the evalcache has been
+generated.  We can alter our wait condition to be:</p>
+<pre><code class="language-zsh">    wait'
+       [[ -f ${ZINIT[SNIPPETS_DIR]}/vivid-theme-nord/evalcache.zsh ]] ||
+       (( $+commands[vivid] )) &amp;&amp;
+       [[ -f ${ZINIT[PLUGINS_DIR]}/vivid-themes/themes/nord.yml ]]
+   '
+</code></pre>
+<p>Initially, our first shell will have to wait until the vivid release has been
+downloaded and the vivid repository has been cloned.  In subsequent shells,
+these conditions should automatically be true.  But, if for some reason, you
+decide to unload or delete these plugins, we can still load our evalcache.zsh to
+get our LS_COLORS and zstyle.</p>
+<p>We can further tweak this by putting <code>if</code> guards around our plugins:</p>
+<pre><code class="language-zsh">zinit wait \
+    as'null' \
+    if'[[ ! -f ${ZINIT[SNIPPETS_DIR]}/vivid-theme-nord/evalcache.zsh ]]' \
+    for \
+    id-as'vivid-bin' from'gh-r' sbin&quot;**/vivid&quot; \
+        @sharkdp/vivid \
+    id-as'vivid-themes' \
+        @sharkdp/vivid
+</code></pre>
+<p>This will cut out these two plugins entirely if the evalcache.zsh exists at the
+time of shell startup -- completely eliminating the load times for these two
+plugins.</p>
+<p>At this point, we're quite over-engineered, but again this demonstrates what a
+bit of zinit-fu 💪 can accomplish.</p>
 
               
             </article>
